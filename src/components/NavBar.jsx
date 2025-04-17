@@ -1,0 +1,2 @@
+import { NavLink } from 'react-router-dom';
+export default function NavBar(){const links=[['/','🗺','Map'],['/matches','🤝','Matches'],['/scan','⚡','Scan'],['/messages','💬','Messages'],['/me','👤','Me']];return(<nav className="fixed bottom-0 inset-x-0 h-16 bg-[#0E1B2C] flex justify-around items-center text-white z-50">{links.map(([p,i,l])=><NavLink key={p} to={p} className={({isActive})=>`flex flex-col items-center text-sm ${isActive?'text-[#FFD100]':'text-gray-400'}`}><span className="text-xl">{i}</span>{l}</NavLink>)}</nav>);}
